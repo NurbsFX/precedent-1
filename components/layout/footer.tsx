@@ -1,28 +1,42 @@
-import { BuyMeACoffee } from "../shared/icons";
+import { Label } from "@/components/ui/label";
 
 export default function Footer() {
   return (
-    <div className="absolute w-full py-5 text-center">
-      <p className="text-gray-500">
-        A project by{" "}
-        <a
-          className="font-semibold text-gray-600 underline-offset-4 transition-colors hover:underline"
-          href="https://twitter.com/steventey"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Steven Tey
-        </a>
-      </p>
-      <a
-        href="https://www.buymeacoffee.com/steventey"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mx-auto mt-2 flex max-w-fit items-center justify-center space-x-2 rounded-lg border border-gray-200 bg-white px-6 py-2 transition-all duration-75 hover:scale-105"
-      >
-        <BuyMeACoffee className="h-6 w-6" />
-        <p className="font-medium text-gray-600">Buy me a coffee</p>
-      </a>
+    <div className="flex absolute w-full py-10">
+      <div className="mx-auto px-10 grid grid-cols-1 md:grid-cols-2">
+        {/* Horaires */}
+        <div>
+          <Label className="text-lg font-bold">Horaires</Label>
+          <br />
+          <Label>Du lundi au vendredi : 9h – 19h30</Label>
+          <br />
+          <Label>Le samedi : 9h – 18h</Label>
+          <br />
+          <Label>Dimanche et jours fériés : 9h30 – 13h00</Label>
+          <br />
+          <Label className="font-bold">Sur rendez-vous & visites à domicile</Label>
+        </div>
+
+        {/* Coordonnées */}
+        <div>
+          <Label className="text-lg font-bold">Coordonnées</Label>
+          <br />
+          <Label className="font-bold">Clinique Vétérinaire du Marché</Label>
+          <br />
+          <Label>30, rue Montrosier, 92200 Neuilly-sur-Seine</Label>
+          <br />
+          <Label>Tél : +33 1 46 24 69 29</Label>
+          <Label className="ml-4">Fax : 01 46 24 82 45</Label> {/* Ajout d'un espace entre Tél et Fax */}
+          <br />
+          <Label>
+            <a href="mailto:contact@veto-neuilly.fr" className="text-blue-500">
+              contact@veto-neuilly.fr
+            </a>
+          </Label>
+        </div>
+
+
+      </div>
     </div>
   );
 }
