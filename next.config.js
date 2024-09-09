@@ -16,4 +16,12 @@ const nextConfig = {
   },
 };
 
+// next.config.js
+module.exports = {
+  images: {
+    domains: ['www.veto-neuilly.fr'], // Ajoute les domaines d'images externes ici
+  },
+};
+
+
 module.exports = nextConfig;

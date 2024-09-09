@@ -24,6 +24,10 @@ import {
 } from "@/components/ui/menubar";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
+import { LuDog } from "react-icons/lu";
+import { PiCat } from "react-icons/pi";
+import { PiRabbit } from "react-icons/pi";
+
 
 export default function NavBar({ session }: { session: Session | null }) {
   const { SignInModal, setShowSignInModal } = useSignInModal();
@@ -56,13 +60,19 @@ export default function NavBar({ session }: { session: Session | null }) {
                 <MenubarTrigger>Accueil</MenubarTrigger>
                 <MenubarContent className="bg-white shadow-lg rounded-md">
                   <MenubarItem>
-                    Présentation
+                    <Link href="#presentation">
+                      Présentation
+                    </Link>
                   </MenubarItem>
                   <MenubarItem>
-                    Actualités
+                    <Link href="#actualites">
+                      Actualités
+                    </Link>
                   </MenubarItem>
                   <MenubarItem>
-                    Informations utiles
+                    <Link href="#footer">
+                      Informations utiles
+                    </Link>
                   </MenubarItem>
                 </MenubarContent>
               </MenubarMenu>
@@ -70,29 +80,37 @@ export default function NavBar({ session }: { session: Session | null }) {
                 <MenubarTrigger>La clinique</MenubarTrigger>
                 <MenubarContent className="bg-white shadow-lg rounded-md">
                   <MenubarItem>
-                    L'équipe
+                    <Link href="/team">
+                      L'équipe
+                    </Link>
                   </MenubarItem>
                   <MenubarItem>
                     Services
                   </MenubarItem>
                   <MenubarItem>
-                    Visite et photos
+                    <Link href="/pics">
+                      Visite et photos
+                    </Link>
                   </MenubarItem>
                 </MenubarContent>
               </MenubarMenu>
               <MenubarMenu>
                 <MenubarTrigger>Fiches conseil</MenubarTrigger>
                 <MenubarContent className="bg-white shadow-lg rounded-md">
-                  <MenubarItem>
-                    Chiens
+                  <MenubarItem className="flex items-center space-x-2">
+                    <LuDog />
+                    <span>Chiens</span>
                   </MenubarItem>
-                  <MenubarItem>
-                    Chats
+                  <MenubarItem className="flex items-center space-x-2">
+                    <PiCat />
+                    <span>Chats</span>
                   </MenubarItem>
-                  <MenubarItem>
-                    NAC - Nouveaux Animaux de Compagnie
+                  <MenubarItem className="flex items-center space-x-2">
+                    <PiRabbit />
+                    <span>Nouveaux Animaux de Compagnie</span>
                   </MenubarItem>
                 </MenubarContent>
+
               </MenubarMenu>
               <MenubarMenu>
                 <MenubarTrigger>Boutique</MenubarTrigger>
