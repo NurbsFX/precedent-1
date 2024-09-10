@@ -26,23 +26,23 @@ export default function Pictures() {
                 </h1>
 
                 {/* Section Photos */}
-                <div className="mt-20">
+                <div className="mt-10">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {pictures.map((item) => (
                             <div key={item.id} className="flex flex-col items-center text-center">
-                                {/* Conteneur ajusté avec dimensions maximales */}
-                                <div className="w-full max-w-xs">
+                                {/* Conteneur ajusté avec dimensions maximales et effet hover */}
+                                <div className="w-full max-w-xs transition-transform duration-300 hover:scale-105">
                                     <Image
                                         src={item.imageUrl}
-                                        layout="responsive"  // Utiliser layout responsive pour respecter le ratio
-                                        width={400}          // Largeur relative pour layout responsive
-                                        height={300}         // Hauteur relative pour layout responsive
+                                        layout="responsive"
+                                        width={400}
+                                        height={400}
                                         className="rounded-md object-contain"
                                         alt={item.description}
                                     />
                                 </div>
                                 {/* Ajout de l'espacement entre l'image et la description */}
-                                <div className="mt-4"> {/* Ajout de plus d'espacement entre l'image et la description */}
+                                <div className="mt-4">
                                     <p className="text-gray-600">{item.description}</p>
                                 </div>
                             </div>

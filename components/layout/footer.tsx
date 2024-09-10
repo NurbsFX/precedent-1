@@ -4,6 +4,8 @@ import { FaRegCalendarCheck, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import Link from "next/link";
 import { FaUserNurse } from "react-icons/fa";
+import { MdImportContacts } from "react-icons/md";
+
 
 export default function Footer() {
   return (
@@ -54,7 +56,7 @@ export default function Footer() {
         {/* Coordonnées */}
         <div>
           <Label className="text-lg font-bold flex items-center space-x-2">
-            <SlEnvolopeLetter />
+            <MdImportContacts />
             <span>Coordonnées</span>
           </Label>
           <div className="mt-2 space-y-2">

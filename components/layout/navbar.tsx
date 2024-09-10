@@ -97,26 +97,40 @@ export default function NavBar({ session }: { session: Session | null }) {
               <MenubarMenu>
                 <MenubarTrigger>Fiches conseil</MenubarTrigger>
                 <MenubarContent className="bg-white shadow-lg rounded-md">
-                  <MenubarItem className="flex items-center space-x-2">
-                    <LuDog />
-                    <span>Chiens</span>
+                  <MenubarItem>
+                    <Link className="flex items-center space-x-2" href="/dogs">
+                      <LuDog />
+                      <span>Chiens</span>
+                    </Link>
                   </MenubarItem>
-                  <MenubarItem className="flex items-center space-x-2">
-                    <PiCat />
-                    <span>Chats</span>
+                  <MenubarItem>
+                    <Link className="flex items-center space-x-2" href="/cats">
+                      <PiCat />
+                      <span>Chats</span>
+                    </Link>
                   </MenubarItem>
-                  <MenubarItem className="flex items-center space-x-2">
-                    <PiRabbit />
-                    <span>Nouveaux Animaux de Compagnie</span>
+                  <MenubarItem >
+                    <Link className="flex items-center space-x-2" href="/nac">
+                      <PiRabbit />
+                      <span>Nouveaux Animaux de Compagnie</span>
+                    </Link>
                   </MenubarItem>
                 </MenubarContent>
 
               </MenubarMenu>
               <MenubarMenu>
-                <MenubarTrigger>Boutique</MenubarTrigger>
+                <MenubarTrigger>
+                  <Link href="/shop">
+                    Boutique
+                  </Link>
+                </MenubarTrigger>
               </MenubarMenu>
               <MenubarMenu>
-                <MenubarTrigger>Adoption</MenubarTrigger>
+                <MenubarTrigger>
+                  <Link href="/adoption">
+                    Adoption
+                  </Link>
+                </MenubarTrigger>
               </MenubarMenu>
             </Menubar>
           </div>
