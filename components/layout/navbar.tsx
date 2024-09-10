@@ -47,7 +47,7 @@ export default function NavBar({ session }: { session: Session | null }) {
         <div className="mx-5 flex h-28 max-w-screen-xl items-center justify-between w-full pt-4">
           <div className="flex h-full items-center space-x-6">
             <Link href="/" className="flex items-center font-display text-4xl">
-              <Label className="max-w-xs text-3xl text-left leading-tight break-words">
+              <Label className="max-w-xs text-3xl text-left leading-tight break-words text-blue-600">
                 Clinique vétérinaire
                 <br />
                 du marché
@@ -57,20 +57,19 @@ export default function NavBar({ session }: { session: Session | null }) {
             {/* Menubar aligné avec les autres éléments */}
             <Menubar>
               <MenubarMenu>
-                <MenubarTrigger>Accueil</MenubarTrigger>
+                <MenubarTrigger>
+                  <Link href="/">
+                    Accueil
+                  </Link>
+                </MenubarTrigger>
                 <MenubarContent className="bg-white shadow-lg rounded-md">
                   <MenubarItem>
-                    <Link href="#presentation">
-                      Présentation
-                    </Link>
-                  </MenubarItem>
-                  <MenubarItem>
-                    <Link href="#actualites">
+                    <Link href="/#footer">
                       Actualités
                     </Link>
                   </MenubarItem>
                   <MenubarItem>
-                    <Link href="#footer">
+                    <Link href="/#footer">
                       Informations utiles
                     </Link>
                   </MenubarItem>
@@ -85,7 +84,9 @@ export default function NavBar({ session }: { session: Session | null }) {
                     </Link>
                   </MenubarItem>
                   <MenubarItem>
-                    Services
+                    <Link href="/services">
+                      Services
+                    </Link>
                   </MenubarItem>
                   <MenubarItem>
                     <Link href="/pics">

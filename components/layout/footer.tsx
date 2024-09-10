@@ -17,7 +17,7 @@ export default function Footer() {
 
         {/* Horaires */}
         <div>
-          <Label className="text-lg font-bold flex items-center space-x-2">
+          <Label className="text-lg font-bold flex items-center space-x-2 text-blue-600">
             <FaRegCalendarCheck />
             <span>Horaires</span>
           </Label>
@@ -35,7 +35,7 @@ export default function Footer() {
 
         {/* Docteurs */}
         <div>
-          <Label className="text-lg font-bold flex items-center space-x-2">
+          <Label className="text-lg font-bold flex items-center space-x-2 text-blue-600">
             <FaUserNurse />
             <span>Nos docteurs</span>
           </Label>
@@ -55,7 +55,7 @@ export default function Footer() {
 
         {/* Coordonnées */}
         <div>
-          <Label className="text-lg font-bold flex items-center space-x-2">
+          <Label className="text-lg font-bold flex items-center space-x-2 text-blue-600">
             <MdImportContacts />
             <span>Coordonnées</span>
           </Label>

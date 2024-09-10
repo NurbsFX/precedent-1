@@ -48,13 +48,15 @@ export default function Team() {
                     <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8">
                         {doctors.map((item) => (
                             <div key={item.id} className="flex flex-col items-center text-center space-y-4">
-                                <Image
-                                    src={item.imageUrl}
-                                    alt={item.name}
-                                    width={200}
-                                    height={200}
-                                    className="rounded-md object-cover"
-                                />
+                                <div className="transition-transform duration-300 hover:scale-105">
+                                    <Image
+                                        src={item.imageUrl}
+                                        alt={item.name}
+                                        width={200}
+                                        height={200}
+                                        className="rounded-md object-cover"
+                                    />
+                                </div>
                                 <h3 className="text-xl font-semibold">{item.name}</h3>
                                 <p className="text-gray-600">{item.description}</p>
                             </div>

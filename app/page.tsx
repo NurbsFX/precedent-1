@@ -68,7 +68,7 @@ export default function Home() {
     <>
       <div className="z-10 w-full px-5 xl:px-0">
         <h1
-          className="animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm [text-wrap:balance] md:leading-[5rem]"
+          className="animate-fade-up bg-gradient-to-br from-blue-800 to-blue-600 bg-clip-text text-center font-display tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm [text-wrap:balance] md:leading-[5rem]"
           style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
         >
           <span className="text-4xl md:text-6xl font-bold">Bienvenue à</span>
@@ -89,7 +89,7 @@ export default function Home() {
             <Button
               className="group flex items-center space-x-3 rounded-lg bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 px-5 py-2 text-sm text-white transition-transform transform hover:scale-105"
             >
-              <IoLogoInstagram className="h-6 w-6 text-white group-hover:text-gray-200" />
+              <IoLogoInstagram className="h-6 w-6 text-white " />
               <span>Suivez-nous sur Instagram !</span>
             </Button>
           </Link>
@@ -103,7 +103,7 @@ export default function Home() {
         >
           {/* Texte de présentation à droite */}
           <div className="w-full md:w-1/2 flex flex-col justify-center p-5 md:p-10">
-            <h2 className="text-3xl font-bold mb-4">Notre Équipe</h2>
+            <h2 className="text-3xl font-bold mb-4 text-blue-600">Notre Équipe</h2>
             <p className="text-gray-600 text-lg leading-relaxed">
               Bienvenue sur le site internet de <strong>La Clinique Vétérinaire du Marché</strong>, regroupant toutes les informations nécessaires sur nos prestations et services, un aperçu de notre clinique et les informations pratiques pour nous joindre.
             </p>
@@ -136,16 +136,17 @@ export default function Home() {
         </div>
 
         <div
-          id="acutalites"
           className="mt-10 flex justify-center">
-          <Carousel className="w-full max-w-lg">
+          <Carousel
+            id="acutalites"
+            className="w-full max-w-lg">
             <CarouselContent>
               {newsItems.map((item, index) => (
                 <CarouselItem key={index}>
                   <div className="p-1">
                     <Card>
                       <CardHeader>
-                        <CardTitle className="text-xl font-bold">
+                        <CardTitle className="text-xl font-bold text-blue-600">
                           {item.title}
                         </CardTitle>
                         {/* Affichage discret de la date */}
